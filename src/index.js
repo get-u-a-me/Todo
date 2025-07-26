@@ -1,10 +1,14 @@
-import { Todo } from "./modules/todo";
+import { todos, addTodo } from "./modules/todo";
+import { addProject, projects } from "./modules/projectManager";
+
+//styles
 import "./styles/index.css"
-import { addProject } from "./modules/projectManager";
+import "./styles/dialog.css"
 
-const project_add_btn = document.querySelector(".add-project-btn")
-
-project_add_btn.addEventListener("click", (e) => {
-    let name = prompt("enter name");
-    addProject(name);
+document.querySelector(".add-project-btn").addEventListener("click", (e) => {
+    addProject();
 });
+
+document.querySelector(".add-todo-btn").addEventListener("click", (e) => {
+    addTodo();
+})

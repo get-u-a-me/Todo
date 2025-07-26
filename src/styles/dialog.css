@@ -1,0 +1,125 @@
+.project-dialog {
+    width: 350px;
+    /* oder was du willst */
+    padding: .6rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+
+    /* Zentrierung */
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.project-dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.347);
+}
+
+input {
+    margin-bottom: .5rem;
+    height: 1.5rem;
+    padding: .4rem;
+    border-radius: 7px;
+    border: 1px solid black;
+    font-size: 14px;
+}
+
+textarea {
+    max-width: 100%;
+    min-height: 80px;
+    max-height: 80px;
+    resize: none;
+    border-radius: 8px;
+    border: 1px solid black;
+    padding: .1rem .2rem;
+    font-size: 14px;
+    overflow-y: auto;
+}
+
+.project-dialog-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-dialog-close-btn,
+.todo-dialog-close-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: .6rem 1.3rem;
+    padding: 3px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.project-dialog-close-btn:hover,
+.todo-dialog-close-btn:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.dialog-project-add-btn,
+.dialog-todo-add-btn {
+    margin: .7rem 0rem;
+    padding: .3rem;
+    border: 1px solid black;
+    border-radius: 7px;
+}
+
+.dialog-project-add-btn:hover,
+.dialog-todo-add-btn:hover {
+    cursor: pointer;
+}
+
+.todo-add-dialog {
+    width: 500px;
+    padding: .6rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+    row-gap: 1rem;
+
+    /* Zentrierung */
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.todo-add-dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.311);
+}
+
+.todo-dialog-main {
+    display: flex;
+    flex-direction: column;
+}
+
+#todo-priority {
+    padding: .2rem;
+    height: 26px;
+}
+
+#todo-until {
+    padding: .1rem;
+    height: 26px;
+}
+
+.parent-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
