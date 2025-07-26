@@ -1,1 +1,82 @@
-<head><script defer src="main.js"></script></head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>!Todo</title>
+<script defer src="index.js"></script></head>
+
+<body>
+    <header>
+        <div class="Logo">!TODO</div>
+    </header>
+
+    <aside class="sidebar">
+        <button class="sidebar-static-btn" data-id="inbox">Allgemein</button>
+        <button class="sidebar-static-btn" data-id="today">Heute</button>
+        <button class="sidebar-static-btn" data-id="week">Diese Woche</button>
+        <div class="seperator">
+            <div>Projekte</div>
+            <button class="add-project-btn">+</button>
+        </div>
+        <dialog class="project-dialog">
+            <div class="dialog-top">
+                <h2>Projekt hinzufügen</h2>
+                <button class="project-dialog-close-btn">X</button>
+            </div>
+            <form class="project-dialog-main">
+                <label for="project-title">Titel:</label>
+                <input type="text" id="project-title" name="titel" required autofocus>
+                <label for="project-description">Beschreibung:</label>
+                <textarea type="text" id="project-description" name="description"> </textarea>
+                <button class="dialog-project-add-btn" type="submit">Add</button>
+            </form>
+        </dialog>
+        <ul class="project-list">
+        </ul>
+    </aside>
+
+    <main class="content">
+
+    </main>
+
+    <button class="add-todo-btn">+</button>
+
+    <dialog class="todo-add-dialog">
+        <div class="dialog-top">
+            <h2>Neues Todo</h2>
+            <button class="todo-dialog-close-btn">X</button>
+        </div>
+        <form class="todo-dialog-main">
+            <label for="todo-title">Titel:</label>
+            <input type="text" id="todo-title" name="titel" required autofocus>
+
+            <label for="todo-description">Beschreibung:</label>
+            <textarea type="text" id="todo-description" name="description"> </textarea>
+
+            <div class="parent-wrapper">
+                <div class="wrapper">
+                    <label for="todo-until">Erledign bis:</label>
+                    <input type="date" id="todo-until" name="until">
+                </div>
+
+                <div class="wrapper">
+                    <label for="todo-priority">Priorität</label>
+                    <select id="todo-priority" name="prirority">
+                        <option value="1">Niedrig</option>
+                        <option value="2">Mittel</option>
+                        <option value="3">Hoch</option>
+                    </select>
+                </div>
+            </div>
+            <button class="dialog-todo-add-btn" type="submit">Add</button>
+        </form>
+    </dialog>
+
+    <footer>
+        <div>© 2025 Not Todo List. Made with ❤️ by Jan.</div>
+    </footer>
+</body>
+
+</html>
