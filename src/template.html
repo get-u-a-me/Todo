@@ -10,12 +10,15 @@
 <body>
     <header>
         <div class="Logo">!TODO</div>
+        <button id="menuToggle" aria-label="Menü umschalten" class="menu-toggle">☰</button>
     </header>
 
+
+
     <aside class="sidebar">
-        <button class="sidebar-static-btn" data-id="inbox">Allgemein</button>
-        <button class="sidebar-static-btn" data-id="today">Heute</button>
-        <button class="sidebar-static-btn" data-id="week">Diese Woche</button>
+        <button id="allgemein" class="sidebar-static-btn active" data-id="inbox">Allgemein</button>
+        <button id="today" class="sidebar-static-btn" data-id="today">Heute</button>
+        <button id="week" class="sidebar-static-btn" data-id="week">Diese Woche</button>
         <div class="seperator">
             <div>Projekte</div>
             <button class="add-project-btn">+</button>
@@ -38,7 +41,14 @@
     </aside>
 
     <main class="content">
-
+        <div class="open">
+            <div class="content-title">Allgemein</div>
+            <div class="todos"></div>
+        </div>
+        <div class="done">
+            <div class="content-title">Erledigt</div>
+            <div class="todos-done"></div>
+        </div>
     </main>
 
     <button class="add-todo-btn">+</button>
@@ -70,7 +80,7 @@
                     </select>
                 </div>
             </div>
-            <button class="dialog-todo-add-btn" type="submit">Add</button>
+            <button class="todo-add-btn" type="submit">Add</button>
         </form>
     </dialog>
 
